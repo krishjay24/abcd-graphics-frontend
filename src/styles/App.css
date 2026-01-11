@@ -1,0 +1,130 @@
+@import url('https://use.typekit.net/arp7xal.css');
+
+:root {
+  /* Brand Colors */
+  --primary-color: #ed7d31;
+  --primary-light: #f9ac79;
+  --primary-dark: #e4e8f2;
+  --primary-darker: #404040;
+  --primary-darkest: #202020;
+
+  /* Background Colors */
+  --bg-main: #ced6e8;
+  --bg-white: #ffffff;
+  --bg-light: #fcfcf9;
+  --bg-gradient-start: #fff5ed;
+  --bg-gradient-end: #f9fbff;
+
+  /* Text Colors */
+  --text-primary: #5c5c5c;
+  --text-dark: #404040;
+  --text-light: #7f7f7f;
+  --text-lighter: #adb5cc;
+  --text-white: #ffffff;
+  --text-black: #000000;
+
+  /* Border Colors */
+  --border-light: #ebebeb;
+  --border-lighter: #e5e7eb;
+  --border-dark: #00000014;
+  --border-darker: #5c5c5c23;
+  --pdf-border-color: #efefe9;
+
+  /* Shadow Colors */
+  --shadow-light: #0000000a;
+  --shadow-dark: #00000014;
+  --shadow-orange: #ed7d3142;
+
+  /* Gradient Colors */
+  --gradient-orange-start: #fffaf6;
+  --gradient-orange-end: #f9fbff;
+
+  /* Hover Effect Colors */
+  --hover-effect-color: #ed7d3142;
+  --hover-effect-color-dark: #ed7d3180;
+
+  /* Colors */
+  --color-gray: #f1f1f1;
+  --color-gray200: #707277;
+  --color-green500: #0fc45a;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Proxima-Nova', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 1;
+  position: relative;
+}
+
+/* Selection Styles */
+::selection {
+  background: var(--primary-light);
+  color: var(--text-white);
+}
+
+/* Global Button Styles */
+button {
+  background-color: var(--primary-color);
+  padding: 12px 30px;
+  border-radius: 60px;
+  color: var(--text-white);
+  font-size: 16px;
+  font-weight: 500;
+  height: 55px;
+  margin: 20px 0px;
+  transition: background-color 0.3s ease;
+}
+
+/* Global Layout */
+main {
+  display: flex;
+  position: relative;
+  font-family: 'Proxima-Nova';
+}
+
+/* Global Scrolling Sections */
+#web,
+#social,
+#print,
+#brand,
+#extra {
+  scroll-margin-top: 100px;
+}
+
+/* Global Media Queries */
+@media screen and (max-width: 1250px) {
+  html {
+    font-size: 14px;
+  }
+
+  button {
+    padding: 10px 25px;
+    width: 180px;
+    height: 50px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+
+  button {
+    padding: 8px 20px;
+    width: 160px;
+    height: 45px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,35 @@
+name: Deploy to abcd.graphics (Self-Hosted)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the project (WASM Safe Mode)
+        run: |
+          export VITE_FORCE_WASM=true
+          npm run build
+
+      - name: Deploy to public_html
+        run: |
+          rm -rf /home/abcd/public_html/*
+          cp -R ./dist/* /home/abcd/public_html/
+
+      - name: Exit Successfully
+        run: exit 0

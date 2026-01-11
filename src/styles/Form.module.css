@@ -1,0 +1,83 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  padding-right: 50px;
+}
+
+.form input {
+  padding: 15px 25px;
+  background-color: var(--bg-main);
+  color: var(--text-black);
+  margin-bottom: 10px;
+  font-size: 16px;
+  height: 60px;
+  border-radius: 40px;
+}
+
+.form input::placeholder {
+  color: var(--text-lighter);
+}
+
+.form textarea {
+  padding: 15px 25px;
+  background-color: var(--bg-main);
+  font-size: 16px;
+  border-radius: 20px;
+}
+
+.form textarea::placeholder {
+  color: var(--text-lighter);
+}
+
+.form button {
+  padding: 10px 25px;
+  background-color: var(--primary-color);
+  border-radius: 60px;
+  margin-top: 20px;
+  width: 60%;
+  color: var(--text-white);
+}
+
+@media screen and (max-width: 1250px) {
+  .form {
+    padding-right: 30px;
+  }
+
+  .form input {
+    padding: 12px 20px;
+    font-size: 14px;
+    height: 50px;
+  }
+
+  .form textarea {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .form button {
+    padding: 8px 20px;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .form {
+    padding-right: 20px;
+  }
+
+  .form input {
+    padding: 10px 15px;
+    font-size: 12px;
+    height: 45px;
+  }
+
+  .form textarea {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+
+  .form button {
+    padding: 8px 15px;
+    width: 80%;
+  }
+}

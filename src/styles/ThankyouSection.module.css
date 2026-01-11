@@ -1,0 +1,128 @@
+/* Thank You Section */
+.thankyouSection {
+  height: 100vh;
+  border-top: 1px solid var(--border-dark);
+  background-color: var(--bg-main);
+  background-image: url('../images/thank-you-banner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.preview-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.thankyouSection h2 {
+  font-size: 150px;
+  line-height: 120px;
+  text-align: center;
+  color: var(--primary-color);
+  font-weight: 900;
+}
+
+.thankyouSection img {
+  width: 180px;
+}
+
+.thankyouSection p {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: Proxima-Nova;
+  letter-spacing: 0px;
+}
+
+.thankyouDetails {
+  display: flex;
+  gap: 50px;
+  margin-top: 80px;
+}
+.icons {
+  width: 2rem;
+  height: 2rem;
+  width: 100%;
+}
+/* Responsive Adjustments */
+@media screen and (max-width: 1250px) {
+  .thankyouSection h2 {
+    font-size: 120px;
+    line-height: 100px;
+  }
+  .thankyouSection img {
+    width: 150px;
+    margin-top: 50px;
+  }
+  .thankyouDetails {
+    gap: 30px;
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .thankyouSection h2 {
+    font-size: 80px;
+    line-height: 70px;
+  }
+  .thankyouSection img {
+    width: 120px;
+    margin-top: 30px;
+  }
+  .thankyouSection p {
+    font-size: 14px;
+  }
+  .thankyouDetails {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+    align-items: center;
+  }
+}
+
+.thankyou-content {
+  text-align: center;
+  color: #000;
+  flex-grow: 0.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.thankyou-content h2 {
+  font-size: 9.375rem;
+  line-height: 7.5rem;
+  text-align: center;
+  color: #ed7d31;
+  font-weight: 900;
+}
+
+.thankyou-content img {
+  display: block;
+  margin: 5rem auto;
+}
+
+.thankyou-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3.125rem;
+}
+
+.thankyou-details a {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.thankyou-details button {
+  padding: 1.2rem;
+}

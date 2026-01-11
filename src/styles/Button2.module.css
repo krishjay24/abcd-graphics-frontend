@@ -1,0 +1,51 @@
+.btn_container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  transition: color 0.5scubic-bezier(0.26, 0.39, 0.55, 0.86);
+}
+
+.btn_text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: inherit;
+}
+
+.btn_icon_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn_icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The button will inherit these styles from the global CSS */
+:global(.btn-ani-bg) {
+  background-color: black;
+  border-radius: 60px;
+  padding: 10px 25px;
+  width: 100%;
+  position: absolute;
+  right: 100%;
+  top: 0px;
+  height: 100%;
+  transition: all 0.5s cubic-bezier(0.26, 0.39, 0.55, 0.86);
+}
+
+/* Add hover effect */
+button:hover :global(.btn-ani-bg) {
+  right: 0;
+  border-radius: 60px 20px 20px 60px;
+}
+
+/* Change text color on hover */
+button:hover .btn_container {
+  color: white;
+}

@@ -1,0 +1,181 @@
+/* .dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 2rem;
+  padding: 0.89rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Proxima-Nova";
+  color: var(--primary-darker);
+  cursor: pointer;
+  width: 100%;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1.2rem center;
+  background-size: 1.2rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #ed7d31;
+}
+
+.select:hover {
+  border-color: #ed7d31;
+}
+
+.select option {
+  padding: 12px 16px;
+  font-size: 1rem;
+  background-color: white;
+  color: var(--primary-darker);
+  font-family: "Proxima-Nova";
+  border: 1px solid #e0e0e0;
+  transition: all 0.2s ease-in-out;
+}
+
+.select option:hover {
+  background-color: #ed7d31;
+  border-color: #ed7d31;
+  color: white;
+}
+
+.select option:checked {
+  color: var(--primary-darker);
+  border-color: #ed7d31;
+}
+.btnContainer {
+  display: flex;
+  gap: 0.6rem;
+}
+.dropdownContainer {
+  display: flex;
+  gap: 0.6rem;
+}
+@media screen and (max-width: 768px) {
+  .select {
+    padding: 1rem 2.8rem 1rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .select option {
+    font-size: 0.95rem;
+    padding: 0.6rem 0.8rem;
+  }
+} */
+
+
+
+/* Dropdown wrapper */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+/* Selected item display (replaces <select>) */
+.select {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 2rem;
+  padding: 0.89rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Proxima-Nova";
+  color: var(--primary-darker);
+  cursor: pointer;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease-in-out;
+
+  /* Optional dropdown arrow */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1.2rem center;
+  background-size: 1.2rem;
+}
+
+.select:focus,
+.select:hover {
+  border-color: #ed7d31;
+  outline: none;
+}
+
+/* Dropdown list (<ul>) */
+.optionList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%; /* Match the .select width */
+  margin-top: 8px;
+  padding: 0;
+  list-style: none;
+  /* border: 1px solid #e0e0e0; */
+  border-radius: 5px;
+  background-color: white;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-height: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+}
+
+.option {
+  width: 150px; 
+  padding: 5px 16px;
+  font-size: 1rem;
+  font-family: "Proxima-Nova";
+  color: var(--primary-darker);
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin-bottom: 0 !important;
+}
+
+.option:hover {
+  background-color: #ed7d31;
+  color: white;
+}
+
+.option:last-child {
+  border-bottom: none;
+}
+
+@media screen and (max-width: 768px) {
+  .select {
+    padding: 1rem 2.8rem 1rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .option {
+    font-size: 0.95rem;
+    padding: 0.6rem 0.8rem;
+  }
+}
+
+.btnContainer {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.dropdownContainer {
+  display: flex;
+  gap: 0.6rem;
+}

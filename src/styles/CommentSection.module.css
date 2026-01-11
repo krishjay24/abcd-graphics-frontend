@@ -1,0 +1,369 @@
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/* Comment Section classes */
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 28.125rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+}
+.commentPanel {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.title {
+  width: 100%;
+  height: 3.125rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.063rem solid #f1f1f1;
+  font-weight: 600 !important;
+  font-size: 1.25rem !important;
+  color: #47484b;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.closeButton img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.commentsdivison {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 1rem;
+}
+.viewer_comments {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.comments {
+  display: grid;
+  grid-template-columns: 2.1rem 1fr;
+  gap: 1.2rem;
+  padding: 1.2rem;
+  border: 1px solid var(--border-dark);
+  border-radius: 1rem;
+}
+
+.commentReact {
+  width: 2.1rem;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: auto;
+  margin: 0;
+  background-color: var(--color-gray);
+  border-radius: 0.3rem;
+}
+.commentReact button:hover img {
+  filter: brightness(0) saturate(100%) invert(26%) sepia(89%) saturate(2094%)
+    hue-rotate(325deg) brightness(96%) contrast(96%);
+}
+
+/* .commentReact hr {
+  width: 80%;
+  height: 0.06rem;
+  background-color: #dfe1e6;
+  margin: auto;
+  border: 0;
+} */
+
+.commentReact span {
+  height: 2.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-gray200);
+}
+
+.like_section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+}
+
+.like_section img {
+  position: relative;
+  z-index: 1;
+  width: 1rem;
+  height: 1rem;
+}
+
+.like_section:after {
+  content: '';
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  left: -0.156rem;
+  top: -0.156rem;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  z-index: 0;
+  transform: scale(0);
+}
+
+.like_section:hover:after {
+  animation: ripple 0.6s ease-in-out forwards;
+}
+
+.like_section:hover img {
+  filter: brightness(0) saturate(100%) invert(32%) sepia(100%) saturate(7498%)
+    hue-rotate(353deg) brightness(96%) contrast(101%) drop-shadow(0 0 0 #ed7d31);
+}
+.commentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+}
+.user {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 0.6rem;
+}
+
+.userPic {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-gray200);
+}
+
+.userPic:after {
+  content: '';
+  width: 0.563rem;
+  height: 0.563rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background-color: var(--color-green500);
+  border: 0.125rem solid #ffffff;
+}
+
+.userInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.userInfo span {
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: var(--text-primary);
+}
+
+.userInfo p {
+  font-weight: 600;
+  font-size: 0.625rem;
+  color: var(--text-lighter);
+  margin: 0;
+}
+.commentContent {
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin: 0;
+}
+.textBox {
+  width: 100%;
+  height: fit-content;
+  background-color: var(--bg-white);
+  padding: 1rem;
+  border: 1px solid var(--border-dark);
+  border-radius: 1rem;
+}
+.boxContainer {
+  background-color: var(--bg-white);
+  padding: 0.5rem;
+  position: relative;
+}
+
+.boxContainer textarea {
+  width: 100%;
+  height: 2.5rem;
+  resize: none;
+  border: 0;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 400;
+  outline: none;
+  caret-color: var(--primary-color);
+  color: var(--text-primary);
+}
+
+.formatting button {
+  width: 0.5rem;
+  height: 1.8rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 90%;
+  border: 0;
+  outline: none;
+}
+
+.formatting,
+.bold_italic_emojiSection {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  position: relative;
+}
+.emojiPickerWrapper {
+  position: absolute;
+  bottom: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  box-shadow: 0 0 10px var(--shadow-dark);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  width: 280px;
+  background: white;
+}
+
+/* Custom styles for emoji picker */
+.emojiPickerWrapper :global(.EmojiPickerReact) {
+  width: 280px;
+  height: 180px;
+  border: none;
+  background: white;
+}
+
+/* Remove all text labels and adjust spacing */
+.emojiPickerWrapper :global(.EmojiPickerReact .epr-category-nav) {
+  display: none;
+}
+
+.emojiPickerWrapper :global(.EmojiPickerReact .epr-emoji-category-label) {
+  display: none;
+}
+
+.emojiPickerWrapper :global(.EmojiPickerReact .epr-header) {
+  display: none;
+}
+
+/* Center emojis and adjust the grid */
+.emojiPickerWrapper :global(.EmojiPickerReact .epr-body) {
+  padding: 0.5rem;
+  height: 100%;
+}
+
+.emojiPickerWrapper :global(.EmojiPickerReact .epr-emoji-category-content) {
+  margin: 0;
+  padding: 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(32px, 1fr));
+  gap: 8px;
+  justify-items: center;
+}
+
+.emojiPickerWrapper
+  :global(.EmojiPickerReact .epr-emoji-category-content button) {
+  margin: 0;
+  width: 32px;
+  height: 32px;
+  font-size: 24px;
+}
+
+/* Scrollbar styles */
+.emojiPickerWrapper :global(.EmojiPickerReact .epr-body::-webkit-scrollbar) {
+  width: 8px;
+}
+
+.emojiPickerWrapper
+  :global(.EmojiPickerReact .epr-body::-webkit-scrollbar-track) {
+  background: var(--bg-white);
+  border-radius: 4px;
+}
+
+.emojiPickerWrapper
+  :global(.EmojiPickerReact .epr-body::-webkit-scrollbar-thumb) {
+  background: #ffffff;
+  border-radius: 4px;
+}
+
+.emojiPickerWrapper
+  :global(.EmojiPickerReact .epr-body::-webkit-scrollbar-thumb:hover) {
+  background: #ffffff;
+}
+
+/* Remove any remaining text and adjust emoji appearance */
+.emojiPickerWrapper :global(.EmojiPickerReact *) {
+  font-size: 0;
+}
+
+.emojiPickerWrapper :global(.EmojiPickerReact .epr-emoji-category-content img),
+.emojiPickerWrapper
+  :global(.EmojiPickerReact .epr-emoji-category-content span) {
+  font-size: 24px;
+  margin: 0;
+}
+.send {
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: var(--primary-color);
+  margin: 0 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+}
+.send img {
+  width: 1rem;
+  height: 1rem;
+}
+.send:hover {
+  background-color: var(--primary-color);
+}

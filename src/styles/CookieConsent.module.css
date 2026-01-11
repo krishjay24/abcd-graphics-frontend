@@ -1,0 +1,90 @@
+.cookieConsent {
+  font-family: Proxima Nova;
+  padding: 35px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: var(--bg-white);
+  display: flex;
+  gap: 50px;
+  border-radius: 10px;
+  max-width: 500px;
+  z-index: 1000;
+}
+
+.cookieConsent button {
+  border: 1px solid var(--primary-color);
+  border-radius: 60px;
+  padding: 10px 25px;
+  width: 100px;
+  position: relative;
+  overflow: hidden;
+  cursor: none;
+  height: 50px;
+}
+
+.btnAniBg {
+  background-color: var(--text-black);
+  border-radius: 60px;
+  padding: 10px 25px;
+  width: 100px;
+  position: absolute;
+  right: 100%;
+  top: 0px;
+  height: 100%;
+  transition: all 0.5s cubic-bezier(0.26, 0.39, 0.55, 0.86);
+}
+
+.cookieConsent button:hover .btnAniBg {
+  right: 0;
+}
+
+.btnText {
+  position: relative;
+  z-index: 10;
+  transition: color 0.8s cubic-bezier(0.26, 0.39, 0.55, 0.86);
+  font-size: 18px;
+}
+
+.cookieConsent button:hover .btnText {
+  color: var(--text-white);
+}
+
+@media screen and (max-width: 1250px) {
+  .cookieConsent {
+    padding: 25px;
+    bottom: 30px;
+    right: 30px;
+    max-width: 400px;
+    gap: 30px;
+  }
+
+  .cookieConsent button {
+    width: 90px;
+    height: 45px;
+  }
+
+  .btnText {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cookieConsent {
+    padding: 20px;
+    bottom: 20px;
+    right: 20px;
+    max-width: 300px;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .cookieConsent button {
+    width: 80px;
+    height: 40px;
+  }
+
+  .btnText {
+    font-size: 14px;
+  }
+}

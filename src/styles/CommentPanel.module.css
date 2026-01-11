@@ -1,0 +1,75 @@
+.timestamp {
+  color: #888;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+.commentText {
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.2;
+  word-break: break-word;
+  font-weight: 400;
+}
+
+.header {
+  padding: 1.2rem 1rem;
+  border-bottom: 1px solid #00000014;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem;
+}
+
+.closeButton img {
+  width: 0.8rem;
+  height: 0.8rem;
+  transition: transform 0.2sease;
+}
+
+.closeButton:hover img {
+  transform: rotate(90deg);
+}
+/* Scrollbar Styling */
+.commentsList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.commentsList::-webkit-scrollbar-track {
+  background: #222222;
+}
+
+.commentsList::-webkit-scroll bar-thumb {
+  background: #444;
+  border-radius: 0.1rem;
+}
+
+.commentsList::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 30rem) {
+  .panel {
+    width: 100%;
+    right: -100%;
+  }
+
+  .emojiPickerWrapper {
+    right: 0;
+    left: 0;
+  }
+}
+
+/* This is For Comment Section */
+
+.emojiPickerWrapper {
+  width: 280px;
+  height: 180px;
+}

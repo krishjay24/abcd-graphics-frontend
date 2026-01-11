@@ -1,0 +1,189 @@
+.fixedSidebar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: white;
+  height: 100vh;
+  z-index: 50;
+}
+
+.fixedSidebar > div {
+  width: 150px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 30px;
+  padding-bottom: 40px;
+  padding-top: 10px;
+  border-right: 1px solid #00000014;
+}
+
+.logo {
+  width: 115px;
+  height: 90px;
+}
+
+.logoHolder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebarDynamicName {
+  rotate: -90deg;
+  font-size: 3.125rem;
+  color: #ed7d31;
+  font-weight: 800;
+  text-wrap: nowrap;
+}
+
+.mobileNav {
+  display: none;
+}
+
+.mobileNav img {
+  width: 20px;
+  height: 20px;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+.mobileMenu.active {
+  left: 0;
+}
+
+.mobileMenuNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cross {
+  width: 35px;
+  height: 35px;
+}
+
+.mobileMenuLogo {
+  width: 50px;
+  height: 50px;
+}
+
+.mobileMenuNavLinks {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ed7d31;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.mobileMenuNavLinks a {
+  margin-bottom: 10px;
+}
+
+.socialLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  display: none;
+}
+
+.socialLinks img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
+.socialLinks a:hover img {
+  transform: scale(1.1);
+}
+
+.mobileMenuSocialLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.mobileMenuSocialLinks a {
+  color: var(--primary-darker);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.2s ease;
+}
+
+.mobileMenuSocialLinks a:hover {
+  color: #ff6b00;
+}
+
+@media screen and (max-width: 650px) {
+  .fixedSidebar {
+    width: 100vw;
+    height: 80px;
+    position: fixed;
+    z-index: 50;
+  }
+
+  .fixedSidebar > div {
+    width: 100%;
+    flex-direction: unset;
+    padding: 20px;
+    min-height: unset;
+  }
+
+  .fixedSidebar > div > a:first-child {
+    display: none;
+  }
+
+  .logoHolder {
+    order: -1;
+    width: 15%;
+  }
+
+  .logo {
+    width: 80px;
+    height: 50px;
+  }
+
+  .sidebarDynamicName {
+    rotate: unset;
+    font-size: 25px;
+  }
+
+  .mobileNav {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .fixedSidebar > div > a:last-child {
+    order: -1;
+  }
+
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    background-color: #cad5e8;
+    width: 100vw;
+    height: 100vh;
+    left: 100%;
+    padding: 20px;
+    z-index: 10000;
+    transition: all 0.5s linear;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .sidebarDynamicName {
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,277 @@
+.introContainer {
+  min-height: 100vh;
+  padding: 50px 100px;
+  background-color: var(--bg-white);
+}
+
+.introProfile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.profilePic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+}
+
+.profilePic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.introProfileName {
+  color: var(--primary-color);
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.age {
+  color: var(--text-primary);
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--bg-light);
+  transition: transform 0.3s ease;
+}
+
+.link:hover {
+  transform: scale(1.1);
+}
+
+.link img {
+  width: 20px;
+  height: 20px;
+}
+
+.email,
+.website {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-primary);
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.website {
+  color: var(--primary-color);
+}
+
+.introDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.careerSection,
+.trainingSection {
+  background-color: var(--bg-light);
+  border-radius: 20px;
+  padding: 50px;
+}
+
+.summary {
+  margin-bottom: 50px;
+}
+
+.summaryHeading {
+  color: var(--primary-color);
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.summaryDesc {
+  color: var(--text-primary);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.summaryDesc span {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.flowChart {
+  margin-top: 50px;
+}
+
+.flowChartCard {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.flowChartCardColumn1 {
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.flowChartYear,
+.flowChartNum {
+  color: var(--primary-color);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.flowChartCardDetails {
+  flex: 1;
+  padding-left: 30px;
+  border-left: 2px solid var(--primary-color);
+}
+
+.flowChartCardDetails h3 {
+  color: var(--text-dark);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.flowChartCardDetails h3 span {
+  color: var(--text-light);
+  font-weight: 400;
+}
+
+.flowChartCardDetails p {
+  color: var(--text-primary);
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.flowChartCardDetails ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: var(--text-primary);
+}
+
+.flowChartCardDetails li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 1250px) {
+  .introContainer {
+    padding: 40px 80px;
+  }
+
+  .profilePic {
+    width: 180px;
+    height: 180px;
+  }
+
+  .introProfileName {
+    font-size: 22px;
+  }
+
+  .summaryHeading {
+    font-size: 28px;
+  }
+
+  .careerSection,
+  .trainingSection {
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .introContainer {
+    padding: 30px 60px;
+  }
+
+  .introProfile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .socialLinks {
+    justify-content: center;
+  }
+
+  .email,
+  .website {
+    justify-content: center;
+  }
+
+  .summaryHeading {
+    font-size: 24px;
+  }
+
+  .flowChartCard {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .flowChartCardColumn1 {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .flowChartCardDetails {
+    padding-left: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .introContainer {
+    padding: 20px 30px;
+  }
+
+  .profilePic {
+    width: 150px;
+    height: 150px;
+  }
+
+  .careerSection,
+  .trainingSection {
+    padding: 30px;
+  }
+
+  .summaryHeading {
+    font-size: 22px;
+  }
+
+  .summaryDesc {
+    font-size: 14px;
+  }
+
+  .flowChartCardDetails h3 {
+    font-size: 16px;
+  }
+
+  .flowChartCardDetails p,
+  .flowChartCardDetails li {
+    font-size: 14px;
+  }
+}

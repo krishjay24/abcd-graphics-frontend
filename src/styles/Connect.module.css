@@ -1,0 +1,124 @@
+.letsConnectContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 800px;
+  padding: 50px 100px;
+  position: relative;
+  background-color: var(--bg-white);
+}
+
+.letsConnectContainer > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.letsConnectCol1 {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.letsConnectCol1 h2 {
+  color: var(--primary-color);
+  font-size: 75px;
+  line-height: 65px;
+  font-weight: 800;
+}
+
+.letsConnectCol1 p {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.letsConnectCol1 .first {
+  color: #ed7d31;
+  margin: 15px 0px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.letsConnectCol1 .last {
+  color: #ed7d31;
+  font-size: 1.563rem;
+  font-weight: 800;
+  width: 100%;
+}
+.letsConnectCol2 {
+  width: 30%;
+}
+
+.connectCol2 {
+  margin-top: 50px;
+}
+
+/* .connectCol22 {
+  margin-top: 30px;
+} */
+
+.connectCol21 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.letsConnectCol3 {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  min-height: 600px;
+}
+
+.connectCol22 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex: 1;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 1100px) {
+  .letsConnectContainer > div {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .letsConnectCol1 {
+    width: 100%;
+  }
+
+  .letsConnectCol3 {
+    width: 100%;
+    min-height: 500px;
+    gap: 1.5rem;
+  }
+
+  .letsConnectCol1 h2 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .letsConnectCol1 p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .connectCol22 {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .letsConnectContainer {
+    padding: 30px 60px;
+  }
+}
