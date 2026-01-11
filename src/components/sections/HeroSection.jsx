@@ -111,7 +111,7 @@ export default function HeroSection({ elementsRef }) {
               <i>(you guessed it, I've watched too many sci-fi movies)</i> to
               dive into my world. A world of design possibilities, a place of
               magic, and in this realm, I'm the magician with the magic wand{' '}
-              <i>(or a ring, your imaginative choices)!</i>
+              <i>(or a ring, your imaginative choice)!</i>
             </p>
           </div>
 
